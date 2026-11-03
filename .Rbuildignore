@@ -1,0 +1,8 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^A4_Yixiang_Xu\.qmd$
+^data-raw$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

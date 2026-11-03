@@ -1,0 +1,92 @@
+# dataexplorer
+
+Explore published border quarantine simulation scenarios from
+Zachreson et al. (2022).
+
+This package is intended for public health students exploring how
+viral transmissibility (R0) and vaccine efficacy relate to infection
+pressure from quarantine breaches.
+
+## Installation
+
+Install the package from GitHub:
+
+```r
+# Run once if devtools is not installed:
+install.packages("devtools")
+
+devtools::install_github("ETC5523-2026/etc5523-assignment-4-xyx81")
+```
+
+Access to the repository is required if it is private.
+
+## Launch the app
+
+```r
+library(dataexplorer)
+run_app()
+```
+
+Select one or more R0 values and use the slider to set the minimum
+vaccine efficacy. The plot, summary and table update together.
+
+The dashed line marks the fixed baseline of 1: R0 = 3 and vaccine
+efficacy = 0%. Lower values indicate less infection pressure.
+
+## Data and interpretation
+
+The package includes `quarantine_scenarios`, with 100 scenarios and
+three variables:
+
+- `r0`: basic reproduction number, from 1 to 10.
+- `vaccine_efficacy`: efficacy against infection, from 0 to 0.9.
+- `relative_pressure`: integrated infection pressure relative to
+  the fixed baseline.
+
+These are historical simulation results under the study's assumptions.
+The outcome is not an outbreak probability or a current forecast.
+In the selected analysis, vaccination reduces susceptibility to
+infection without reducing infectiousness in breakthrough cases.
+
+The preparation script is `data-raw/prepare-quarantine-data.R`.
+It selects and renames three columns from the authors' published
+results without changing their values.
+
+Sources:
+
+- [Zachreson et al. (2022), article](https://doi.org/10.1126/sciadv.abm3624)
+- [Supplementary code and data (2021), Zenodo](https://doi.org/10.5281/zenodo.5802433)
+
+## Select scenarios in R
+
+```r
+selected <- select_scenarios(
+  data = quarantine_scenarios,
+  r0_values = c(3, 6),
+  min_efficacy = 0.5
+)
+
+selected
+```
+
+This returns the 10 published scenarios with R0 values of 3 or 6
+and vaccine efficacy of at least 50%.
+
+## License
+
+Package code is licensed under the MIT license.
+The source data archive is distributed under CC BY 4.0;
+see the Zenodo record for attribution and licensing information.
+
+## AI use declaration
+
+OpenAI ChatGPT/Codex was used to help explain course concepts,
+provide step-by-step guidance, suggest portions of R code and
+documentation, and troubleshoot errors. I implemented
+the changes in RStudio, ran the code and package checks, and
+inspected the resulting outputs. 
+
+I reviewed and considered all AI suggestions before deciding
+whether to use them. AI served as a supporting tool, and I take
+responsibility for the final submission.
+

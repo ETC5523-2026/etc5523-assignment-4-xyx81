@@ -1,0 +1,35 @@
+---
+title: "A4_Yixiang_Xu"
+format: html
+---
+
+# Assignment 4 planning notes
+
+## Intended user
+
+Public health students who want to understand the quarantine
+simulation results reported by Zachreson et al. (2022).
+
+## Question
+
+Within the published simulation scenarios, how does the relative
+infection pressure from quarantine breaches change with viral
+transmissibility and vaccine efficacy?
+
+## Initial scope
+
+The app will focus on the scenarios underlying Figure 3.
+The outcome is integrated infection pressure relative to the
+baseline scenario, not the probability of a community outbreak.
+
+The baseline scenario uses R0 = 3 and vaccine efficacy = 0.
+
+## Interpretation
+
+The app will communicate historical model results under the
+study's assumptions. It will not provide current outbreak forecasts.
+
+## Data status
+
+The article identifies public sources for the Figure 3 data.
+The data files, variables and reuse conditions still need to be checked.

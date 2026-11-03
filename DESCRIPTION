@@ -1,0 +1,26 @@
+Package: dataexplorer
+Title: Explore Published Border Quarantine Simulation Scenarios
+Version: 0.0.0.9000
+Authors@R: person("Yixiang", "Xu",
+    email = "yxuu0346@student.monash.edu",
+    role = c("aut", "cre"))
+Description: Provides published border quarantine simulation data and
+    tools for selecting scenarios by viral transmissibility and vaccine
+    efficacy. Includes a Shiny application for comparing relative
+    infection pressure across scenarios reported by Zachreson et al.
+    (2022) <doi:10.1126/sciadv.abm3624>.
+Encoding: UTF-8
+Depends: 
+    R (>= 3.5)
+LazyData: true
+Config/roxygen2/version: 8.1.0
+Imports: 
+    bslib,
+    dplyr,
+    ggplot2,
+    shiny
+License: MIT + file LICENSE
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
