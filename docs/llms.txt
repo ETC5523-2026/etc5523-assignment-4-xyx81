@@ -7,6 +7,11 @@ This package is intended for public health students exploring how viral
 transmissibility (R0) and vaccine efficacy relate to infection pressure
 from quarantine breaches.
 
+## Documentation
+
+See the [package documentation and user
+guide](https://etc5523-2026.github.io/etc5523-assignment-4-xyx81/).
+
 ## Installation
 
 Install the package from GitHub:
